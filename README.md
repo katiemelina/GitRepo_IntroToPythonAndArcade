@@ -22,7 +22,7 @@ You don't need to be a Git master to use this repo. Choose whichever option feel
 You must have Git installed, or the VS Code Git extension. Open your terminal or VS Code and run:
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/intro-python-arcgis-workshop.git
+git clone https://github.com/katiemelina/GitRepo_IntroToPythonAndArcade.git
 ```
 
 (Note: If Wi-Fi acts up or downloads fail, your instructor also has these files ready on backup thumb drives in the room!)
