@@ -1,0 +1,56 @@
+// For the parcels vis
+
+var v = $feature.ASMT_PER_ACRE
+
+// cutoffs: placeholders, adjust as needed
+var low = 25000
+var mid = 100000
+var high = 250000
+
+if (IsEmpty(v)) {
+    return "No data"
+} else if (v < low) {
+    return "1 - Low"
+} else if (v < mid) {
+    return "2 - Moderate"
+} else if (v < high) {
+    return "3 - High"
+}
+return "4 - Very high"
+
+
+
+
+// For the Milkweed vis
+var desc = Lower($feature.DESCRIPTION)
+
+// word lists: placeholders, edit as you like
+var milkweedWords = ["milkweed", "asclepias", "butterfly weed"]
+var otherWords = ["nectar", "flower", "echinacea", "goldenrod", "zinnia", "bergamot", "bee balm", "black-eyed", "black eyed", "blazing star", "joe pye", "salvia", "butterfly bush", "marigold", "lavender", "phlox", "coreopsis", "yarrow", "verbena"]
+
+function hasAny(text, words) {
+    for (var i = 0; i < Count(words); i++) {
+        if (Find(words[i], text) > -1) {
+            return true
+        }
+    }
+    return false
+}
+
+if (IsEmpty($feature.DESCRIPTION)) {
+    return "No description"
+}
+
+var mw = hasAny(desc, milkweedWords)
+var other = hasAny(desc, otherWords)
+
+if (mw && other) {
+    return "Milkweed + other plants"
+} else if (mw) {
+    return "Milkweed (no other plants named)"
+}
+return "No milkweed mentioned"
+
+// THEN UNDER VARY BY ATTRIBUTES:
+
+return 14

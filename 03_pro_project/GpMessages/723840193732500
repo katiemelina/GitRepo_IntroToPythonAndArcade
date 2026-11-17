@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?><messages><msg code="0" type="2">Start Time: Monday, November 16, 2026 7:29:45 PM</msg><msg code="0" type="0">Starting Parcels Clean + Join Tool...</msg><msg code="0" type="0">Loaded raw data with shape: (131397, 69)</msg><msg code="0" type="0">WARNING: repeated HANDLEs (only the first row is used in the join): ['16032000292']</msg><msg code="0" type="0">Cleaned data saved to: C:\Users\kwilliams\Dropbox\PythonandArcadeClass\GitRepo_IntroToPythonAndArcade\04_data\Bonus\Parcels_1997_Cleaned.csv (131397 rows)</msg><msg code="-2147467259" type="100">Traceback (most recent call last):
+﻿  File "C:\Users\kwilliams\Dropbox\PythonandArcadeClass\GitRepo_IntroToPythonAndArcade\03_pro_project\IntroToPythonAndArcade.atbx\DataCleanToFCParcels.tool\tool.script.execute.py", line 55, in &lt;module&gt;
+﻿  File "C:\Program Files\ArcGIS\Pro\Resources\ArcPy\arcpy\management.py", line 6950, in CopyFeatures
+    raise e
+﻿  File "C:\Program Files\ArcGIS\Pro\Resources\ArcPy\arcpy\management.py", line 6941, in CopyFeatures
+    gp.CopyFeatures_management(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        *gp_fixargs(
+        ^^^^^^^^^^^^
+    ...&lt;2 lines&gt;...
+        )
+        ^
+    )
+    ^
+﻿  File "C:\Program Files\ArcGIS\Pro\Resources\ArcPy\arcpy\geoprocessing\_base.py", line 533, in &lt;lambda&gt;
+    return lambda *args: val(*gp_fixargs(args, True))
+                         ~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+﻿arcgisscripting.ExecuteError: ERROR 000210: Cannot create output C:\Users\kwilliams\Dropbox\PythonandArcadeClass\GitRepo_IntroToPythonAndArcade\03_pro_project\IntroToPythonAndArcade.gdb\c1997_DataCleanToFCParcels1
+Failed to execute (CopyFeatures).
+
+﻿</msg><msg code="0" type="0">Failed script DataCleanToFC Parcels...</msg><msg code="-2147467259" type="100">Failed to execute (DataCleanToFCParcels).</msg><msg code="0" type="3">Failed at Monday, November 16, 2026 7:29:50 PM (Elapsed Time: 5.00 seconds)</msg></messages>
